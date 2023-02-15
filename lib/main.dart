@@ -8,6 +8,8 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:testing/reminders.dart';
 import 'vault.dart';
 import 'people_you_know.dart';
+import 'prescriptions.dart';
+import 'game_main.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -252,6 +254,10 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 InkWell(
+                  onTap: () => {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (_) => const GameApp())),
+                  },
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16.0, right: 24.0),
                     child: Container(
@@ -391,6 +397,13 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const PrescriptionApp()),
+                        );
+                      },
                       child: Padding(
                         padding: const EdgeInsets.only(top: 9.0, right: 24.0),
                         child: Container(
