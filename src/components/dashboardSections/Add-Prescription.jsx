@@ -33,8 +33,6 @@ const AddPrescription = ({ addPrescription, updatePrescription }) => {
   });
 
   useEffect(() => {
-    // addForm.values.name = currentPrescription.name;
-    // addForm.values.disease = c
     addForm.setValues({
       name: currentPrescription.name,
       disease: currentPrescription.disease,
@@ -53,14 +51,12 @@ const AddPrescription = ({ addPrescription, updatePrescription }) => {
       <div className="p-2">
         <form
           onSubmit={addForm.onSubmit((values) => {
-            console.log("creating");
-            console.log(values);
-
             if (!updateMethod) {
               console.log("creating");
               addPrescription(values);
             } else {
               console.log("updating");
+              console.log(currentPrescription.id);
               updatePrescription(values, currentPrescription.id);
             }
           })}
@@ -126,15 +122,6 @@ const AddPrescription = ({ addPrescription, updatePrescription }) => {
                 type="submit"
               >
                 <IconPlus />
-              </ActionIcon>
-              <ActionIcon
-                radius="lg"
-                variant="filled"
-                color="blue"
-                size="xl"
-                type="submit"
-              >
-                <IconUpload />
               </ActionIcon>
             </motion.div>
           </div>

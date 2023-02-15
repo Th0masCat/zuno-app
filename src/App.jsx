@@ -23,8 +23,11 @@ function App() {
         <Route path="/connect-app" element={<ConnectWithAppPage />} />
         {isLoggedIn ? (
           <>
-            <Route path="/dashboard" element={<Dashboard />}>
-              <Route path={"/dashboard/"} element={<Text>Dashboard</Text>} />
+            <Route
+              className="text-2xl text-light-blue"
+              path="/dashboard"
+              element={<Dashboard />}
+            >
               <Route
                 path={"/dashboard/live-location"}
                 element={<LiveLocation />}
