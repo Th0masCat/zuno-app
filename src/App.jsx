@@ -10,6 +10,7 @@ import LiveLocation from "./components/dashboardSections/Live-location";
 import SetReminder from "./components/dashboardSections/Set-Reminder";
 import Testing from "./components/dashboardSections/testingSec";
 import UpdatePrescription from "./components/dashboardSections/Update-Prescription";
+import MonitorPerformance from "./components/dashboardSections/MonitorPerformance";
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(true);
@@ -23,7 +24,7 @@ function App() {
         {isLoggedIn ? (
           <>
             <Route path="/dashboard" element={<Dashboard />}>
-              <Route path={"/dashboard"} element={<Text>Dashboard</Text>} />
+              <Route path={"/dashboard/"} element={<Text>Dashboard</Text>} />
               <Route
                 path={"/dashboard/live-location"}
                 element={<LiveLocation />}
@@ -35,6 +36,10 @@ function App() {
               <Route
                 path={"/dashboard/update-prescription"}
                 element={<UpdatePrescription />}
+              />
+              <Route
+                path={"/dashboard/performance"}
+                element={<MonitorPerformance />}
               />
             </Route>
           </>
