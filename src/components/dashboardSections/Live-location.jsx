@@ -56,13 +56,13 @@ const LiveLocation = (props) => {
   };
 
   const [currentLocation, setCurrentLocation] = useState({
-    latitude: 28.7330199,
-    longitude: 77.1188811,
+    latitude: 28.544516340429436,
+    longitude: 77.33354453739945,
   });
 
   let circleCenter = {
-    lat: 28.7330199,
-    lng: 77.1188811,
+    lat: 28.544516340429436,
+    lng: 77.33354453739945,
   };
 
   useEffect(() => {
