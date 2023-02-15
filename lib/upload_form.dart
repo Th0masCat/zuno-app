@@ -8,7 +8,7 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 // ignore: depend_on_referenced_packages
 import 'package:path/path.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:testing/people_you_know.dart';
+import 'package:zuno/people_you_know.dart';
 
 const purple = Color.fromRGBO(122, 135, 251, 1);
 
@@ -77,7 +77,7 @@ class _ImageUploadsState extends State<ImageUploads> {
         'name': nameController.text,
         'relationship': relController.text,
         'url':
-            'https://firebasestorage.googleapis.com/v0/b/hacky-e0462.appspot.com/o/files%2F$fileName?alt=media&token=9acfbca4-da88-45a8-8e53-bbfba9b111d6',
+            'https://firebasestorage.googleapis.com/v0/b/hacky-e0462.appspot.com/o/files%2F$fileName?alt=media&token=d98c1389-68be-43ff-8c88-029c0bd87043',
       });
 
       message = 'User added successfully';
